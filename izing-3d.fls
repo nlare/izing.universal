@@ -1,0 +1,9 @@
+PWD /home/nlare/_code/izing.universal.with.u
+INPUT /usr/share/texmf-dist/web2c/texmf.cnf
+INPUT /var/lib/texmf/web2c/pdftex/pdflatex.fmt
+INPUT /home/nlare/_code/izing.universal.with.u/izing-3d.cpp
+OUTPUT /home/nlare/_code/izing.universal.with.u/izing-3d.log
+OUTPUT /home/nlare/_code/izing.universal.with.u/izing-3d.pdf
+INPUT /var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map
+INPUT /usr/share/texmf-dist/tex/latex/base/omlcmr.fd
+INPUT /usr/share/texmf-dist/tex/latex/base/omlcmr.fd
