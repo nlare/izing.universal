@@ -29,7 +29,13 @@ int main(int argc, char *argv[])    {
 
     // Izing2D Model("Izing2D", 16, 1000, 100);
     //params - name, grid_size, mcs_max, statistic
-    Izing3D Model("Izing3D", 128, 1000, 100, 1);
+	// 1-й параметр - 3-х мерная (Izing3D) или 2-х мерная (Izing2D) модель Изинга будет использоваться
+	// 2-й - размер решетки
+	// 3-й - количество шагов Монте-Карло
+	// 4-й - число потоков для обработки температур параллельно
+	//
+	//
+    Izing3D Model("Izing3D", 32, 1000, 20, 1);
 
 #ifndef _OPENMP
     cout << "OpenMP is not supported!" << endl;
@@ -37,11 +43,11 @@ int main(int argc, char *argv[])    {
 #endif
 
     // Model.setStreams(1);
-    // Model.setTemperatureStatic(4.3, 4.51, 4.7, 5.0);
-    Model.setTemperatureRange(1.8, 3.1);
-    Model.setMethod("WS"); //
+    // Model.setTemperatureStatic(1.8, 4.2, 4.8, 6.5);
+    Model.setTemperatureRange(1.8, 6.5, 4.2, 4.8);
+    Model.setMethod("M"); //
 
-    cout << "this!" << endl;
+//    cout << "this!" << endl;
 
     // omp_time_start = omp_get_wtime();
 
